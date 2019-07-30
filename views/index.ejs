@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css.map">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center col-md-6">
+
+            <% if (!user) { %>
+            <h3><span class="fa fa-lock"></span> Node Authentication</h3>
+            <h2 style="font-size:40px;">Welcome! Please log in.</h2>
+
+            <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook">
+                <span class="fa fa-facebook"></span> Sign in with Facebook
+            </a>
+
+            <a href="/auth/github" class="btn btn-block btn-social btn-github">
+                <span class="fa fa-github"></span> Sign in with GitHub
+            </a>
+
+            <a href="/auth/google" class="btn btn-block btn-social btn-google">
+                <span class="fa fa-google-plus"></span> Sign in with Google
+            </a>
+
+            <a href="/auth/linkedin" class="btn btn-block btn-social btn-linkedin">
+                <span class="fa fa-linkedin"></span> Sign in with Linkedin
+            </a>
+
+            <a href="#" class="btn btn-block btn-social btn-twitter">
+                <span class="fa fa-twitter"></span> Sign in with Twitter
+            </a>
+
+            <a href="/auth/pinterest" class="btn btn-block btn-social btn-pinterest">
+                <span class="fa fa-pinterest"></span> Sign in with Pinterest
+            </a>
+            <% } else { %>
+            <h2>Hello, <%= user.displayName %>.</h2>
+            <% } %>
+        </div>
+
+    </div>
+</body>
+
+</html>
