@@ -24,6 +24,6 @@
     "passport-linkedin-oauth2": "^2.0.0",
     "passport-pinterest": "^1.0.0",
     "passport-pinterest-oauth": "^0.3.2",
-    "sequelize": "^5.10.3"
+    "sequelize": "^5.15.1"
   }
 }
